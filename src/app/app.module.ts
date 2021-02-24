@@ -9,6 +9,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ReturnProductListComponent } from './return-product-list/return-product-list.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { ReturnProductListComponent } from './return-product-list/return-product
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-      { path: 'products/:productId', component: ProductDetailsComponent}
+      { path: 'products/:productId', component: ProductDetailsComponent},
+      { path: 'cart/', component: CartComponent},
     ])
   ],
   declarations: [
@@ -25,7 +27,8 @@ import { ReturnProductListComponent } from './return-product-list/return-product
     ProductListComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
-    ReturnProductListComponent
+    ReturnProductListComponent,
+    CartComponent
   ],
   bootstrap: [ AppComponent ]
 })
